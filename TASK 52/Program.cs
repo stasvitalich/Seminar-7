@@ -65,7 +65,10 @@ for (int i = 0; i < n; i = i + 1)
     Console.WriteLine("");
 }
 
-
+// Напишем цикл, который будет считать среднее арифметическое в каждом ряду.
+// GetLength позволит перебирать элементы порядно.
+// Полученную сумму делим на кол-во эл-ов в ряду. Результат округлим.
+Console.Write("Среднее арифметическое каждого столбца: ");
 for (int i = 0; i < array.GetLength(0); i++)
 {
     double sum = 0;
@@ -73,5 +76,5 @@ for (int i = 0; i < array.GetLength(0); i++)
     {
         sum = sum + array[j, i];
     }
-    Console.Write($"{ sum / array.GetLength(0)} ");
-}
+    Console.Write($"{Math.Round(sum / array.GetLength(0), 2)}; "); 
+}                                                                 
