@@ -64,3 +64,14 @@ for (int i = 0; i < n; i = i + 1)
     }
     Console.WriteLine("");
 }
+
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    double sum = 0;
+    for (int j = 0; j < array.GetLength(0); j++)
+    {
+        sum = sum + array[j, i];
+    }
+    Console.Write($"{ sum / array.GetLength(0)} ");
+}
